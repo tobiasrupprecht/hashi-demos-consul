@@ -1,0 +1,18 @@
+global:
+  name: consul
+  datacenter: t-dc
+server:
+  replicas: 1
+  securityContext:
+    runAsNonRoot: false
+    runAsGroup: 0
+    runAsUser: 0
+    fsGroup: 0
+ui:
+  enabled: true
+  service:
+    type: 'NodePort'
+connectInject:
+  enabled: true
+controller:
+  enabled: true
