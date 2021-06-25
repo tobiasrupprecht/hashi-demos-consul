@@ -145,9 +145,11 @@ kubectl apply -f dashboard.yaml
 minikube service list
 
 # If stopped running, bring the UI back - use additional terminal
+# kubectl port-forward consul-server-0 8500:8500
 minikube service consul-ui
 
 # Check out the Dashboard that we've deployed - new terminal window
+# Check the UI on localhost:9002
 kubectl port-forward deploy/dashboard 9002:9002
 
 # Create Service Intention to deny traffic between Dashboard & Counting (can also be done in the UI)
